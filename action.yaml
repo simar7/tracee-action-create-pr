@@ -20,6 +20,5 @@ runs:
       git commit -m 'update tracee.profile'
       git push -f --set-upstream origin tracee-profile-update
 #      gh auth login --with-token <<<'${{ secrets.GITHUB_TOKEN }}'
-      compareURL='${{ github.event.compare }}'
-      bodyMessage="Changes introduced with changes:${compareURL} Powered by Tracee"
-      gh pr create --title "Updates to tracee.profile" --body "${bodyMessage}"
+#      compareURL='${{ github.event.compare }}'
+      gh pr create --title "Updates to tracee.profile" --body "List of runtime programs executed during this pipeline run. Powered by Tracee"
